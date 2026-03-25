@@ -111,7 +111,7 @@
             color: var(--deep-purple);
         }
 
-        /* Hero Section - SIN OVERLAY FUERTE */
+        /* Hero Section */
         .hero {
             margin-top: 90px;
             background: url('https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/69d473206-559a-4a9b-a6af-61954424c8e57617.png');
@@ -128,7 +128,6 @@
             overflow: hidden;
         }
 
-        /* Overlay muy sutil solo para mejorar legibilidad del texto */
         .hero::before {
             content: '';
             position: absolute;
@@ -136,7 +135,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.25); /* Solo 25% oscuro, nada de fucsia */
+            background: rgba(0, 0, 0, 0.25);
             z-index: 1;
         }
 
@@ -346,17 +345,15 @@
             box-shadow: 0 12px 35px rgba(233, 30, 99, 0.4);
         }
 
-        /* Video Section */
+        /* Video Section - 1 SOLO VIDEO */
         .videos {
             padding: 6rem 2rem;
             background: var(--light-bg);
         }
 
-        .videos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+        .video-wrapper {
+            max-width: 900px;
+            margin: 3rem auto 0;
         }
 
         .video-container {
@@ -364,25 +361,28 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+            background: #000;
         }
 
-        .video-container iframe {
+        .video-container iframe,
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border-radius: 15px;
+            border-radius: 20px;
         }
 
         .video-title {
             text-align: center;
-            font-size: 1.5rem;
-            margin-top: 1rem;
+            font-size: 1.8rem;
+            margin-top: 1.5rem;
             color: var(--primary-purple);
             font-weight: 700;
+            font-family: 'Playfair Display', serif;
         }
 
         /* Gallery Section */
@@ -665,10 +665,6 @@
             .section-title {
                 font-size: 2.2rem;
             }
-
-            .videos-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         /* Scroll animations */
@@ -690,13 +686,19 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" alt="Viajes Con Steefan Logo">
+                <!-- ============================================ -->
+                <!-- AGREGA TU LOGO AQUÍ -->
+                <!-- 1. Sube tu archivo logo.png a GitHub -->
+                <!-- 2. Descomenta la línea de abajo (quita <!-- y -->) -->
+                <!-- 3. Asegúrate que el nombre del archivo sea correcto -->
+                <!-- ============================================ -->
+                <!-- <img src="logo.png" alt="Viajes Con Steefan Logo"> -->
                 <span class="logo-text">VIAJES CON STEEFAN</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#tours">Tours</a></li>
-                <li><a href="#videos">Videos</a></li>
+                <li><a href="#video">Video</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -757,7 +759,7 @@
                     </div>
                 </div>
 
-                <!-- City Tour Cusco -->
+                <!-- City Tour Cusco - SACSAYHUAMAN -->
                 <div class="tour-card fade-in">
                     <div class="image-container">
                         <span class="tour-badge">Imperdible</span>
@@ -780,7 +782,7 @@
                                 <span>Guía Profesional</span>
                             </div>
                         </div>
-                        <div class="tour-price">Desde $18</div>
+                        <div class="tour-price">Desde $35</div>
                         <button class="book-button">Reservar Ahora</button>
                     </div>
                 </div>
@@ -836,12 +838,12 @@
                                 <span>Desayuno + Almuerzo</span>
                             </div>
                         </div>
-                        <div class="tour-price">Desde $45</div>
+                        <div class="tour-price">Desde $50</div>
                         <button class="book-button">Reservar Ahora</button>
                     </div>
                 </div>
 
-                <!-- Valle Sagrado VIP -->
+                <!-- Valle Sagrado - Ollantaytambo -->
                 <div class="tour-card fade-in">
                     <div class="image-container">
                         <span class="tour-badge">Cultura Inca</span>
@@ -864,12 +866,12 @@
                                 <span>Pueblo Inca</span>
                             </div>
                         </div>
-                        <div class="tour-price">Desde $43</div>
+                        <div class="tour-price">Desde $40</div>
                         <button class="book-button">Reservar Ahora</button>
                     </div>
                 </div>
 
-                <!-- Valle Sur -->
+                <!-- Valle Sur - TIPON -->
                 <div class="tour-card fade-in">
                     <div class="image-container">
                         <span class="tour-badge">Arqueología</span>
@@ -928,36 +930,42 @@
         </div>
     </section>
 
-    <!-- Video Section -->
-    <section class="videos" id="videos">
+    <!-- Video Section - 1 SOLO VIDEO -->
+    <section class="videos" id="video">
         <div class="container">
-            <h2 class="section-title" style="text-align: center;">Descubre Nuestros Destinos en Video</h2>
-            <div class="videos-grid">
-                <div class="video-wrapper fade-in">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/8xKjXPKwNKE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-title">Machu Picchu - Maravilla del Mundo</div>
+            <h2 class="section-title" style="text-align: center;">Conoce Nuestros Destinos</h2>
+            
+            <div class="video-wrapper fade-in">
+                <div class="video-container">
+                    <!-- ============================================ -->
+                    <!-- OPCIONES PARA TU VIDEO: -->
+                    <!-- ============================================ -->
+                    
+                    <!-- OPCIÓN 1: YouTube (RECOMENDADO) -->
+                    <!-- 1. Sube tu video a YouTube -->
+                    <!-- 2. Copia el ID de tu video (lo que está después de v= en la URL) -->
+                    <!-- 3. Reemplaza "TU_ID_DE_VIDEO" con el ID real -->
+                    <!-- Ejemplo: Si tu URL es youtube.com/watch?v=ABC123xyz -->
+                    <!-- Entonces reemplaza con: ABC123xyz -->
+                    <iframe src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                    
+                    <!-- OPCIÓN 2: Video archivo local (si subes el video a GitHub) -->
+                    <!-- Descomenta esto y comenta el iframe de arriba -->
+                    <!-- Nombra tu video como: video.mp4 -->
+                    <!--
+                    <video controls>
+                        <source src="video.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5
+                    </video>
+                    -->
                 </div>
-                <div class="video-wrapper fade-in">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/9BwH8xGKvLc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-title">Laguna Humantay - Paraíso Andino</div>
-                </div>
-                <div class="video-wrapper fade-in">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/4xYzP8KqPqM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-title">Montaña de 7 Colores - Vinicunca</div>
-                </div>
-                <div class="video-wrapper fade-in">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/2xL5fKjXwPw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-title">Valle Sagrado de los Incas</div>
-                </div>
+                <div class="video-title">Viajes Con Steefan - Tu Aventura Comienza Aquí</div>
             </div>
+            
         </div>
     </section>
 
