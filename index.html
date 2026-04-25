@@ -24,7 +24,7 @@ nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify
 .logo img { height: 70px; width: auto; }
 .logo-text { font-size: 1.8rem; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-family: 'Playfair Display', serif; }
 
-/* 🔹 Language Switcher - Single Click with Icon */
+/* 🔹 Language Switcher */
 .language-switcher { position: relative; margin-right: 1rem; }
 .lang-toggle { 
   display: flex; align-items: center; gap: 0.4rem; 
@@ -47,7 +47,7 @@ nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify
 .lang-option i { font-size: 1.1rem; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* 🔹 Floating Action Buttons - Icon Only with Brand Colors */
+/* 🔹 Floating Action Buttons */
 .floating-buttons { 
   position: fixed; bottom: 20px; right: 20px; z-index: 9999; 
   display: flex; flex-direction: column; gap: 12px; align-items: flex-end;
@@ -79,10 +79,308 @@ nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify
 .cta-button { display: inline-block; padding: 1.2rem 3.5rem; background: var(--gradient); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s; animation: fadeInUp 1s ease 0.4s backwards; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 3px solid rgba(255,255,255,0.3); }
 .cta-button:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.4); border-color: white; }
 
-/* Sections */
-.about, .tours, .videos, .gallery, .why-us, .contact { padding: 6rem 2rem; }
-.about, .videos, .why-us { background: var(--light-bg); }
-.tours, .gallery { background: white; }
+/* ✅ ABOUT - FONDO MACHU PICCHU CON NUBE DE COLORES */
+.about { 
+  background: url('https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/69d473206-559a-4a9b-a6af-61954424c8e57617.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 6rem 2rem;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 30% 40%, rgba(240, 98, 146, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(186, 104, 200, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(206, 147, 216, 0.35) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 20%, rgba(233, 30, 99, 0.3) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, rgba(156, 39, 176, 0.25) 0%, transparent 40%);
+  z-index: 1;
+  animation: colorCloudAbout 18s ease-in-out infinite alternate;
+}
+
+@keyframes colorCloudAbout {
+  0% { opacity: 0.85; }
+  50% { opacity: 1; }
+  100% { opacity: 0.9; }
+}
+
+.about .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ CAJA CUADRADA PARA EL TEXTO */
+.about-box {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 3.5rem 3rem;
+  max-width: 850px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(233, 30, 99, 0.2);
+  text-align: center;
+}
+
+.about-box .section-title {
+  font-size: 2.8rem !important;
+  margin-bottom: 1.5rem !important;
+  margin-top: 0 !important;
+  background: var(--gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.about-text {
+  font-size: 1.15rem !important;
+  color: #2C1810 !important;
+  line-height: 2 !important;
+  font-weight: 400 !important;
+  text-align: center !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* ✅ TOURS - FONDO MACHU PICCHU CON NUBE DE COLORES */
+.tours { 
+  background: url('https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/69d473206-559a-4a9b-a6af-61954424c8e57617.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 6rem 2rem;
+}
+
+.tours::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(233, 30, 99, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(156, 39, 176, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(123, 31, 162, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 70%, rgba(194, 24, 91, 0.25) 0%, transparent 40%);
+  z-index: 1;
+  animation: colorCloud 15s ease-in-out infinite alternate;
+}
+
+@keyframes colorCloud {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.85; }
+}
+
+.tours .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ✅ VIDEOS - FONDO MACHU PICCHU CON NUBE Y CAJA */
+.videos { 
+  background: url('https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/69d473206-559a-4a9b-a6af-61954424c8e57617.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 6rem 2rem;
+}
+
+.videos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 25% 30%, rgba(233, 30, 99, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 70%, rgba(156, 39, 176, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(194, 24, 91, 0.25) 0%, transparent 40%);
+  z-index: 1;
+  animation: colorCloudVideos 20s ease-in-out infinite alternate;
+}
+
+@keyframes colorCloudVideos {
+  0% { opacity: 0.85; }
+  50% { opacity: 1; }
+  100% { opacity: 0.9; }
+}
+
+.videos .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ CAJA CUADRADA PARA VIDEO */
+.video-box {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 3.5rem 3rem;
+  max-width: 950px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(233, 30, 99, 0.2);
+  text-align: center;
+}
+
+.video-box .section-title {
+  font-size: 2.8rem !important;
+  margin-bottom: 2rem !important;
+  margin-top: 0 !important;
+  background: var(--gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* ✅ GALERÍA - FONDO MACHU PICCHU CON NUBE Y CAJA */
+.gallery { 
+  background: url('https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/69d473206-559a-4a9b-a6af-61954424c8e57617.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 6rem 2rem;
+}
+
+.gallery::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 60% 30%, rgba(240, 98, 146, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 70%, rgba(123, 31, 162, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(233, 30, 99, 0.3) 0%, transparent 40%),
+    radial-gradient(ellipse at 20% 20%, rgba(186, 104, 200, 0.25) 0%, transparent 40%);
+  z-index: 1;
+  animation: colorCloudGallery 22s ease-in-out infinite alternate;
+}
+
+@keyframes colorCloudGallery {
+  0% { opacity: 0.85; }
+  50% { opacity: 1; }
+  100% { opacity: 0.88; }
+}
+
+.gallery .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ CAJA CUADRADA PARA GALERÍA */
+.gallery-box {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 3.5rem 3rem;
+  max-width: 1100px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(233, 30, 99, 0.2);
+  text-align: center;
+}
+
+.gallery-box .section-title {
+  font-size: 2.8rem !important;
+  margin-bottom: 2rem !important;
+  margin-top: 0 !important;
+  background: var(--gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* ✅ WHY US - FONDO MACHU PICCHU CON NUBE Y CAJA */
+.why-us { 
+  background: url('https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/69d473206-559a-4a9b-a6af-61954424c8e57617.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 6rem 2rem;
+}
+
+.why-us::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 40% 40%, rgba(233, 30, 99, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 60%, rgba(9C27B0, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 70%, rgba(206, 147, 216, 0.25) 0%, transparent 40%);
+  z-index: 1;
+  animation: colorCloudWhyUs 19s ease-in-out infinite alternate;
+}
+
+@keyframes colorCloudWhyUs {
+  0% { opacity: 0.85; }
+  50% { opacity: 1; }
+  100% { opacity: 0.88; }
+}
+
+.why-us .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ CAJA CUADRADA PARA WHY US */
+.why-us-box {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 3.5rem 3rem;
+  max-width: 1100px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(233, 30, 99, 0.2);
+  text-align: center;
+}
+
+.why-us-box .section-title {
+  font-size: 2.8rem !important;
+  margin-bottom: 2rem !important;
+  margin-top: 0 !important;
+  background: var(--gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
 .contact { background: var(--gradient); color: white; }
 .container { max-width: 1200px; margin: 0 auto; }
 .section-title { font-size: 3rem; margin-bottom: 1.5rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; text-align: center; }
@@ -90,8 +388,27 @@ nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify
 
 /* Tours */
 .tours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
-.tour-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.12); transition: all 0.4s; position: relative; border: 2px solid transparent; }
-.tour-card:hover { transform: translateY(-15px); box-shadow: 0 25px 70px rgba(233, 30, 99, 0.25); border-color: var(--primary-pink); }
+
+/* ✅ TARJETAS TRANSLÚCIDAS CON EFECTO VIDRIO */
+.tour-card { 
+  background: rgba(255, 255, 255, 0.9) !important; 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px; 
+  overflow: hidden; 
+  box-shadow: 0 15px 50px rgba(0,0,0,0.3); 
+  transition: all 0.4s; 
+  position: relative; 
+  border: 2px solid rgba(233, 30, 99, 0.3);
+}
+
+.tour-card:hover { 
+  transform: translateY(-15px); 
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 25px 70px rgba(233, 30, 99, 0.4); 
+  border-color: var(--primary-pink); 
+}
+
 .tour-image { width: 100%; height: 320px; object-fit: cover; transition: transform 0.5s; }
 .tour-card:hover .tour-image { transform: scale(1.15); }
 .image-container { overflow: hidden; position: relative; }
@@ -125,16 +442,16 @@ nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify
 .itinerary-day li::before { content: '•'; color: var(--primary-pink); font-weight: bold; position: absolute; left: 0; }
 
 /* Video, Gallery, Features, Contact, Footer */
-.video-wrapper { max-width: 900px; margin: 3rem auto 0; }
-.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); background: #000; }
+.video-wrapper { max-width: 900px; margin: 0 auto; }
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); background: #000; }
 .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; }
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-.gallery-item { position: relative; overflow: hidden; border-radius: 15px; height: 350px; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.gallery-item { position: relative; overflow: hidden; border-radius: 15px; height: 300px; cursor: pointer; box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
 .gallery-item:hover img { transform: scale(1.2); }
 .gallery-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--gradient-soft); opacity: 0; transition: opacity 0.4s; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; font-weight: 700; font-family: 'Playfair Display', serif; }
 .gallery-item:hover .gallery-overlay { opacity: 1; }
-.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem; }
 .feature-box { text-align: center; padding: 2.5rem; border-radius: 20px; background: white; transition: all 0.4s; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 .feature-box:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(233, 30, 99, 0.2); }
 .feature-box i { font-size: 3.5rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1.5rem; }
@@ -170,6 +487,11 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
   .floating-buttons { bottom: 15px; right: 15px; gap: 10px; }
   .floating-btn { width: 55px; height: 55px; font-size: 1.3rem; }
   .lang-toggle span { display: none; }
+  .about-box, .video-box, .gallery-box, .why-us-box { padding: 2.5rem 2rem; }
+  .about-box .section-title, .video-box .section-title, .gallery-box .section-title, .why-us-box .section-title { font-size: 2rem !important; }
+  .about-text { font-size: 1rem !important; }
+  .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .features-grid { grid-template-columns: 1fr; }
 }
 .fade-in { opacity: 0; transform: translateY(40px); transition: all 0.8s; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -177,7 +499,7 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 </head>
 <body>
 
-<!-- 🔹 Floating Action Buttons - Icon Only -->
+<!-- 🔹 Floating Action Buttons -->
 <div class="floating-buttons">
   <a href="https://wa.me/51979051320" class="floating-btn whatsapp" target="_blank" title="WhatsApp">
     <i class="fab fa-whatsapp"></i>
@@ -227,15 +549,17 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 </div>
 </section>
 
-<!-- About -->
+<!-- About ✅ CON CAJA CUADRADA -->
 <section class="about" id="nosotros">
 <div class="container">
+<div class="about-box">
 <h2 class="section-title" data-key="about_title">Descubre la Magia de Cusco</h2>
-<p data-key="about_text" style="font-size:1.2rem;color:#555;max-width:900px;margin:0 auto;line-height:2;">En Viajes Con Stefan te ofrecemos experiencias únicas e inolvidables en los destinos más espectaculares del Perú. Desde la majestuosa Machu Picchu hasta las coloridas montañas de los Andes, vivimos haciendo realidad tus sueños de aventura.</p>
+<p class="about-text" data-key="about_text">En Viajes Con Stefan te ofrecemos experiencias únicas e inolvidables en los destinos más espectaculares del Perú. Desde la majestuosa Machu Picchu hasta las coloridas montañas de los Andes, vivimos haciendo realidad tus sueños de aventura.</p>
+</div>
 </div>
 </section>
 
-<!-- Tours -->
+<!-- Tours ✅ CON FONDO MACHU PICCHU -->
 <section class="tours" id="tours">
 <div class="container">
 <h2 class="section-title" style="text-align:center;" data-key="tours_title">Nuestros Paquetes Turísticos</h2>
@@ -247,13 +571,13 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 <img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/69d473206-559a-4a9b-a6af-61954424c8e57617.png" alt="Machu Picchu" class="tour-image"></div>
 <div class="tour-content">
 <h3>Machu Picchu Full Day</h3>
-<p data-key="tour_machu_desc">Vive la experiencia de conocer una de las 7 maravillas del mundo moderno. Explora la ciudadela inca más famosa del planeta con nuestros guías expertos.</p>
+<p data-key="tour_machu_desc">Vive la experiencia de conocer una de las 7 maravillas del mundo moderno.</p>
 <div class="tour-features">
-<div class="feature"><i class="fas fa-bus"></i><span data-key="incl_transport">Transporte</span></div>
-<div class="feature"><i class="fas fa-user-tie"></i><span data-key="incl_private_guide">Guiado Privado</span></div>
-<div class="feature"><i class="fas fa-train"></i><span data-key="incl_train">Ticket de Tren</span></div>
-<div class="feature"><i class="fas fa-bus-alt"></i><span data-key="incl_bus">Ticket de Bus</span></div>
-<div class="feature"><i class="fas fa-ticket-alt"></i><span data-key="incl_tickets">Ingresos Incluidos</span></div>
+<div class="feature"><i class="fas fa-bus"></i><span>Transporte</span></div>
+<div class="feature"><i class="fas fa-user-tie"></i><span>Guiado Privado</span></div>
+<div class="feature"><i class="fas fa-train"></i><span>Ticket de Tren</span></div>
+<div class="feature"><i class="fas fa-bus-alt"></i><span>Ticket de Bus</span></div>
+<div class="feature"><i class="fas fa-ticket-alt"></i><span>Ingresos Incluidos</span></div>
 </div>
 <div class="tour-price">Desde $275</div>
 <div class="tour-buttons">
@@ -269,11 +593,11 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 <img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/170e52377-ca3b-4aed-b342-08f0c6e710d33105.png" alt="Sacsayhuamán" class="tour-image"></div>
 <div class="tour-content">
 <h3>City Tour Cusco</h3>
-<p data-key="tour_city_desc">Recorre la ciudad imperial del Cusco y visita la impresionante fortaleza de Sacsayhuamán con sus enormes piedras perfectamente encajadas. Incluye Qorikancha, Catedral, Q'enqo, Puka Pukara y Tambomachay.</p>
+<p data-key="tour_city_desc">Recorre la ciudad imperial del Cusco y visita la impresionante fortaleza de Sacsayhuamán.</p>
 <div class="tour-features">
-<div class="feature"><i class="fas fa-clock"></i><span data-key="dur_half">Medio Día</span></div>
-<div class="feature"><i class="fas fa-bus"></i><span data-key="incl_transfer">Traslado</span></div>
-<div class="feature"><i class="fas fa-user-tie"></i><span data-key="incl_guide">Guía Profesional</span></div>
+<div class="feature"><i class="fas fa-clock"></i><span>Medio Día</span></div>
+<div class="feature"><i class="fas fa-bus"></i><span>Traslado</span></div>
+<div class="feature"><i class="fas fa-user-tie"></i><span>Guía Profesional</span></div>
 </div>
 <div class="tour-price">Desde $35</div>
 <div class="tour-buttons">
@@ -289,12 +613,11 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 <img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/37c16c9cd-bf62-4a5b-b667-70ee5c92c2656865.png" alt="Ollantaytambo" class="tour-image"></div>
 <div class="tour-content">
 <h3>Valle Sagrado VIP</h3>
-<p data-key="tour_valle_desc">Explora Chinchero con una visita por Moray y las Salineras de Maras, para adentrarse al Valle Sagrado de los Incas con la impresionante fortaleza de Ollantaytambo, el complejo arqueológico de Pisac y un ejemplo perfecto de la arquitectura inca.</p>
+<p data-key="tour_valle_desc">Explora Chinchero, Moray, Salineras de Maras y Ollantaytambo.</p>
 <div class="tour-features">
-<div class="feature"><i class="fas fa-clock"></i><span data-key="dur_1day">1 Día</span></div>
-<div class="feature"><i class="fas fa-shuttle-van"></i><span data-key="incl_transfer">Traslado</span></div>
-<div class="feature"><i class="fas fa-user-tie"></i><span data-key="incl_guide">Guiado</span></div>
-<div class="feature"><i class="fas fa-utensils"></i><span data-key="incl_buffet">Almuerzo Buffet</span></div>
+<div class="feature"><i class="fas fa-clock"></i><span>1 Día</span></div>
+<div class="feature"><i class="fas fa-shuttle-van"></i><span>Traslado</span></div>
+<div class="feature"><i class="fas fa-utensils"></i><span>Almuerzo Buffet</span></div>
 </div>
 <div class="tour-price">Desde $40</div>
 <div class="tour-buttons">
@@ -304,39 +627,17 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 </div>
 </div>
 
-<!-- 4. Valle Sur-->
-<div class="tour-card fade-in">
-<div class="image-container"><span class="tour-badge" data-key="badge_archaeology">Arqueología</span>
-<img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/770e52377-ca3b-4aed-b342-08f0c6e710d39570.png" alt="Tipón" class="tour-image"></div>
-<div class="tour-content">
-<h3>Valle Sur </h3>
-<p data-key="tour_tipon_desc">Descubre Tipón, el templo del agua inca con sus impresionantes sistemas hidráulicos que aún funcionan después de 500 años. Un sitio arqueológico único con andenes y fuentes de agua cristalina.</p>
-<div class="tour-features">
-<div class="feature"><i class="fas fa-clock"></i><span data-key="dur_half">Medio Día</span></div>
-<div class="feature"><i class="fas fa-shuttle-van"></i><span data-key="incl_transfer">Traslado</span></div>
-<div class="feature"><i class="fas fa-user-tie"></i><span data-key="incl_guide">Guiado</span></div>
-</div>
-<div class="tour-price">Desde $25</div>
-<div class="tour-buttons">
-<button class="book-button" onclick="bookTour('Valle Sur - Tipón')" data-key="btn_book">Reservar Ahora</button>
-<button class="itinerary-button" data-key="btn_itinerary" onclick="openItinerary('valle-sur')">Ver Itinerario</button>
-</div>
-</div>
-</div>
-
-<!-- 5. Montaña Vinicunca -->
+<!-- 4. Montaña Vinicunca -->
 <div class="tour-card fade-in">
 <div class="image-container"><span class="tour-badge" data-key="badge_adventure">Aventura</span>
 <img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/69d473206-559a-4a9b-a6af-61954424c8e56433.png" alt="Montaña Vinicunca" class="tour-image"></div>
 <div class="tour-content">
 <h3>Montaña Vinicunca</h3>
-<p data-key="tour_vini_desc">Descubre la mágica Vinicunca, la montaña multicolor que te dejará sin aliento. Una experiencia única a 5,036 msnm en los Andes peruanos.</p>
+<p data-key="tour_vini_desc">Descubre la mágica Vinicunca, la montaña multicolor a 5,036 msnm.</p>
 <div class="tour-features">
-<div class="feature"><i class="fas fa-clock"></i><span data-key="dur_1day">1 Día</span></div>
-<div class="feature"><i class="fas fa-hiking"></i><span data-key="feat_trekking">Trekking</span></div>
-<div class="feature"><i class="fas fa-mountain"></i><span>5,036 msnm</span></div>
-<div class="feature"><i class="fas fa-utensils"></i><span data-key="incl_meals">Desayuno + Almuerzo</span></div>
-<div class="feature"><i class="fas fa-first-aid"></i><span data-key="incl_firstaid">Primeros Auxilios</span></div>
+<div class="feature"><i class="fas fa-clock"></i><span>1 Día</span></div>
+<div class="feature"><i class="fas fa-hiking"></i><span>Trekking</span></div>
+<div class="feature"><i class="fas fa-utensils"></i><span>Desayuno + Almuerzo</span></div>
 </div>
 <div class="tour-price">Desde $45</div>
 <div class="tour-buttons">
@@ -346,21 +647,17 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 </div>
 </div>
 
-<!-- 6. Laguna Humantay -->
+<!-- 5. Laguna Humantay -->
 <div class="tour-card fade-in">
 <div class="image-container"><span class="tour-badge" data-key="badge_nature">Naturaleza</span>
 <img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/49d473206-559a-4a9b-a6af-61954424c8e51355.png" alt="Laguna Humantay" class="tour-image"></div>
 <div class="tour-content">
 <h3>Laguna Humantay</h3>
-<p data-key="tour_hum_desc">Contempla las aguas turquesas de la laguna Humantay rodeada de imponentes nevados. Un paisaje de ensueño en el corazón de los Andes.</p>
+<p data-key="tour_hum_desc">Contempla las aguas turquesas de la laguna Humantay rodeada de nevados.</p>
 <div class="tour-features">
-<div class="feature"><i class="fas fa-clock"></i><span data-key="dur_1day">1 Día</span></div>
-<div class="feature"><i class="fas fa-hiking"></i><span data-key="feat_trekking">Trekking</span></div>
-<div class="feature"><i class="fas fa-mountain"></i><span>4,200 msnm</span></div>
-<div class="feature"><i class="fas fa-shuttle-van"></i><span data-key="incl_transfer">Traslado</span></div>
-<div class="feature"><i class="fas fa-utensils"></i><span data-key="incl_meals">Desayuno + Almuerzo</span></div>
-<div class="feature"><i class="fas fa-user-tie"></i><span data-key="incl_prof_guide">Guía Profesional</span></div>
-<div class="feature"><i class="fas fa-first-aid"></i><span data-key="incl_firstaid">Primeros Auxilios</span></div>
+<div class="feature"><i class="fas fa-clock"></i><span>1 Día</span></div>
+<div class="feature"><i class="fas fa-hiking"></i><span>Trekking</span></div>
+<div class="feature"><i class="fas fa-utensils"></i><span>Desayuno + Almuerzo</span></div>
 </div>
 <div class="tour-price">Desde $50</div>
 <div class="tour-buttons">
@@ -370,63 +667,17 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 </div>
 </div>
 
-<!-- 7. Glaciar de Quelccaya -->
-<div class="tour-card fade-in">
-<div class="image-container"><span class="tour-badge" data-key="badge_expedition">Expedición</span>
-<img src="GlaciarQelqayacusco.top_.inka_.travel.png" alt="Glaciar de Quelccaya" class="tour-image" onerror="this.src='https://via.placeholder.com/400x320/9C27B0/white?text=Quelccaya'"></div>
-<div class="tour-content">
-<h3>Glaciar de Quelccaya</h3>
-<p data-key="tour_quel_desc">Adéntrate en una expedición única hacia el glaciar tropical más grande del mundo. Paisajes glaciares, lagunas altoandinas y aventura extrema en los Andes peruanos.</p>
-<div class="tour-features">
-<div class="feature"><i class="fas fa-clock"></i><span data-key="dur_1day">1 Día</span></div>
-<div class="feature"><i class="fas fa-hiking"></i><span data-key="feat_trekking">Trekking</span></div>
-<div class="feature"><i class="fas fa-shuttle-van"></i><span data-key="incl_transfer">Traslado</span></div>
-<div class="feature"><i class="fas fa-utensils"></i><span data-key="incl_meals">Desayuno + Almuerzo</span></div>
-<div class="feature"><i class="fas fa-user-tie"></i><span data-key="incl_prof_guide">Guía Profesional</span></div>
-<div class="feature"><i class="fas fa-first-aid"></i><span data-key="incl_firstaid">Primeros Auxilios</span></div>
-</div>
-<div class="tour-price">Desde $60</div>
-<div class="tour-buttons">
-<button class="book-button" onclick="bookTour('Glaciar de Quelccaya')" data-key="btn_book">Reservar Ahora</button>
-<button class="itinerary-button" data-key="btn_itinerary" onclick="openItinerary('quelccaya')">Ver Itinerario</button>
-</div>
-</div>
-</div>
-
-<!-- 8. Waqrapukara -->
-<div class="tour-card fade-in">
-<div class="image-container"><span class="tour-badge" data-key="badge_archaeology">Arqueología</span>
-<img src="Huacrapucara-Ruins-Full-Day-1.png" alt="Waqrapukara" class="tour-image" onerror="this.src='https://via.placeholder.com/400x320/E91E63/white?text=Waqrapukara'"></div>
-<div class="tour-content">
-<h3>Waqrapukara</h3>
-<p data-key="tour_waq_desc">Descubre la impresionante fortaleza en forma de cuerno de Waqrapukara, un sitio arqueológico poco conocido con vistas espectaculares al cañón del Apurímac.</p>
-<div class="tour-features">
-<div class="feature"><i class="fas fa-clock"></i><span data-key="dur_1day">1 Día</span></div>
-<div class="feature"><i class="fas fa-hiking"></i><span data-key="feat_trekking">Trekking</span></div>
-<div class="feature"><i class="fas fa-shuttle-van"></i><span data-key="incl_transfer">Traslado</span></div>
-<div class="feature"><i class="fas fa-utensils"></i><span data-key="incl_meals">Desayuno + Almuerzo</span></div>
-<div class="feature"><i class="fas fa-user-tie"></i><span data-key="incl_prof_guide">Guiado Profesional</span></div>
-<div class="feature"><i class="fas fa-first-aid"></i><span data-key="incl_firstaid">Primeros Auxilios</span></div>
-</div>
-<div class="tour-price">Desde $65</div>
-<div class="tour-buttons">
-<button class="book-button" onclick="bookTour('Waqrapukara')" data-key="btn_book">Reservar Ahora</button>
-<button class="itinerary-button" data-key="btn_itinerary" onclick="openItinerary('waqrapukara')">Ver Itinerario</button>
-</div>
-</div>
-</div>
-
-<!-- 9. ATV Valle Sagrado -->
+<!-- 6. ATV Valle Sagrado -->
 <div class="tour-card fade-in" style="grid-column:1/-1;max-width:600px;margin:0 auto;">
 <div class="image-container"><span class="tour-badge" data-key="badge_extreme" style="background:linear-gradient(135deg,#FF5722 0%,#E91E63 100%);">Aventura Extrema</span>
 <img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/57c16c9cd-bf62-4a5b-b667-70ee5c92c2659702.png" alt="Cuatrimotos ATV" class="tour-image"></div>
 <div class="tour-content">
 <h3>Cuatrimotos ATV - Valle Sagrado</h3>
-<p data-key="tour_atv_desc">Vive la adrenalina de recorrer los paisajes más espectaculares del Valle Sagrado en cuatrimotos. Visita Maras, Moray y pueblos andinos con vistas panorámicas increíbles.</p>
+<p data-key="tour_atv_desc">Vive la adrenalina de recorrer el Valle Sagrado en cuatrimotos.</p>
 <div class="tour-features">
 <div class="feature"><i class="fas fa-clock"></i><span>2-4 Horas</span></div>
-<div class="feature"><i class="fas fa-motorcycle"></i><span data-key="incl_atv">ATV Incluido</span></div>
-<div class="feature"><i class="fas fa-helmet-safety"></i><span data-key="incl_equipment">Equipo Completo</span></div>
+<div class="feature"><i class="fas fa-motorcycle"></i><span>ATV Incluido</span></div>
+<div class="feature"><i class="fas fa-helmet-safety"></i><span>Equipo Completo</span></div>
 </div>
 <div class="tour-price">Desde $60</div>
 <div class="tour-buttons">
@@ -440,207 +691,25 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 </div>
 </section>
 
-<!-- Itinerary Modals (All 9 Tours) -->
-<div id="mp-full-day" class="itinerary-modal">
-<div class="itinerary-content">
-<span class="itinerary-close" onclick="closeItinerary('mp-full-day')">&times;</span>
-<h3 data-key="modal_machu_title">🗓️ Machu Picchu Full Day - Itinerario</h3>
-<div class="itinerary-day">
-<h4 data-key="modal_machu_day1">Día 1: Cusco → Machu Picchu</h4>
-<ul>
-<li data-key="modal_machu_li1">🚌 Traslado desde el hotel en Cusco a Ollantaytambo</li>
-<li data-key="modal_machu_li2">🚂 Traslado en tren desde Ollantaytambo a Aguas Calientes</li>
-<li data-key="modal_machu_li3">🚌 Ticket de bus de subida a la ciudadela de Machu Picchu</li>
-<li data-key="modal_machu_li4">🎫 Ingreso a Machu Picchu con horario asignado</li>
-<li data-key="modal_machu_li5">👨‍🏫 Guiado privado en español/inglés (2.5 - 3 horas de recorrido)</li>
-<li data-key="modal_machu_li6">📸 Tiempo libre para fotos y exploración</li>
-<li data-key="modal_machu_li7">🚌 Bus de bajada a Aguas Calientes</li>
-<li data-key="modal_machu_li8">🚂 Retorno en tren a Ollantaytambo</li>
-<li data-key="modal_machu_li9">🚌 Traslado de retorno a su hotel en Cusco</li>
-</ul>
-</div>
-<p style="color:#666;font-size:0.9rem;" data-key="modal_machu_note"><strong>Nota:</strong> ALMUERZO NO INCLUIDO. | <strong>Recomendamos:</strong> Reservar con anticipación por CUPOS LIMITADOS.</p>
-</div>
-</div>
-
-<div id="city-tour" class="itinerary-modal">
-<div class="itinerary-content">
-<span class="itinerary-close" onclick="closeItinerary('city-tour')">&times;</span>
-<h3 data-key="modal_city_title">🏙️ City Tour Cusco - Itinerario</h3>
-<div class="itinerary-day">
-<h4 data-key="modal_city_day1">Medio Día: Recorrido por la Ciudad Imperial</h4>
-<ul>
-<li data-key="modal_city_li1">🚐 Traslado desde tu hotel en Cusco</li>
-<li data-key="modal_city_li2">⛪ Inicia la visita en Qoricancha (Templo del Sol)</li>
-<li data-key="modal_city_li3">🏰 Exploración de Sacsayhuamán: fortaleza inca con piedras monumentales</li>
-<li data-key="modal_city_li4">🗿 Recorrido por Q'enqo, Puka Pukara y Tambomachay</li>
-<li data-key="modal_city_li5">👨‍🏫 Guiado profesional en español/inglés durante todo el recorrido</li>
-<li data-key="modal_city_li6">🚐 Retorno a Cusco</li>
-</ul>
-</div>
-<p style="color:#666;font-size:0.9rem;" data-key="modal_city_note"><strong>Salida:</strong> 7:30 AM o 2:00 PM (según disponibilidad) | <strong>No incluye:</strong> Entradas a sitios arqueológicos (se pueden añadir).</p>
-</div>
-</div>
-
-<div id="vinicunca" class="itinerary-modal">
-<div class="itinerary-content">
-<span class="itinerary-close" onclick="closeItinerary('vinicunca')">&times;</span>
-<h3 data-key="modal_vini_title">🌈 Montaña Vinicunca - Itinerario</h3>
-<div class="itinerary-day">
-<h4 data-key="modal_vini_day1">Día 1: Aventura a la Montaña de 7 Colores</h4>
-<ul>
-<li data-key="modal_vini_li1">🚐 Recolección desde tu hotel en Cusco (5:00 AM aprox.)</li>
-<li data-key="modal_vini_li2">🍳 Desayuno en ruta incluido</li>
-<li data-key="modal_vini_li3">🥾 Trekking hacia Vinicunca (3-4 horas ida, dificultad moderada-alta)</li>
-<li data-key="modal_vini_li4">📸 Tiempo en la cima para fotos panorámicas (5,200 msnm)</li>
-<li data-key="modal_vini_li5">🥪 Almuerzo buffet incluido al retorno</li>
-<li data-key="modal_vini_li6">🩹 Botiquín de primeros auxilios y oxígeno disponible</li>
-<li data-key="modal_vini_li7">🚐 Retorno a Cusco (aprox. 5:30 PM)</li>
-</ul>
-</div>
-<p style="color:#666;font-size:0.9rem;" data-key="modal_vini_note"><strong>Recomendación:</strong> Aclimatación mínima de 2 días en Cusco. | <strong>Incluye:</strong> Traslado, guiado, desayuno y almuerzo.| <strong>Opción de caballo disponible (costo extra)</strong>.</p>
-</div>
-</div>
-
-<div id="humantay" class="itinerary-modal">
-<div class="itinerary-content">
-<span class="itinerary-close" onclick="closeItinerary('humantay')">&times;</span>
-<h3 data-key="modal_hum_title">💧 Laguna Humantay - Itinerario</h3>
-<div class="itinerary-day">
-<h4 data-key="modal_hum_day1">Día 1: Trekking a la Laguna Turquesa</h4>
-<ul>
-<li data-key="modal_hum_li1">🚐 Recolección desde tu hotel en Cusco (5:00 AM aprox.)</li>
-<li data-key="modal_hum_li2">🍳 Desayuno incluido en ruta</li>
-<li data-key="modal_hum_li3">🥾 Caminata hacia la laguna Humantay (1.5-2 horas ida, dificultad moderada)</li>
-<li data-key="modal_hum_li4">📸 Tiempo libre para disfrutar el paisaje (4,200 msnm)</li>
-<li data-key="modal_hum_li5">🥪 Almuerzo buffet incluido</li>
-<li data-key="modal_hum_li6">🩹 Botiquín de primeros auxilios y personal capacitado</li>
-<li data-key="modal_hum_li7">🚐 Retorno a Cusco (aprox. 6:00 PM)</li>
-</ul>
-</div>
-<p style="color:#666;font-size:0.9rem;" data-key="modal_hum_note"><strong>Recomendación:</strong> Llevar ropa abrigadora y protector solar. | <strong>Incluye:</strong> Traslado, guiado, desayuno y almuerzo.| <strong>Opción de caballo disponible (costo extra)</strong>.</p>
-</div>
-</div>
-
-<div id="valle-sagrado" class="itinerary-modal">
-<div class="itinerary-content">
-<span class="itinerary-close" onclick="closeItinerary('valle-sagrado')">&times;</span>
-<h3 data-key="modal_valle_title">🏔️ Valle Sagrado VIP - Itinerario</h3>
-<div class="itinerary-day">
-<h4 data-key="modal_valle_day1">Día 1: Ruta Completa del Valle Sagrado</h4>
-<ul>
-<li data-key="modal_valle_li1">🚐 Recolección desde tu hotel en Cusco (7:00 AM aprox.)</li>
-<li data-key="modal_valle_li2">🧵 Visita a Chinchero: mercado artesanal y iglesia colonial</li>
-<li data-key="modal_valle_li3">🧂 Recorrido por las Salineras de Maras (miles de pozas de sal)</li>
-<li data-key="modal_valle_li4">🌀 Exploración de Moray: laboratorios agrícolas incas</li>
-<li data-key="modal_valle_li5">🍽️ Almuerzo buffet incluido en restaurante local</li>
-<li data-key="modal_valle_li6">🏰 Visita a Ollantaytambo: fortaleza y pueblo inca viviente</li>
-<li data-key="modal_valle_li7">🗿 Visita Pisac: centro arqueologico de impresionantes andenes agricolas</li>
-<li data-key="modal_valle_li8">👨‍🏫 Guiado profesional durante todo el recorrido</li>
-<li data-key="modal_valle_li9">🚐 Retorno a Cusco (aprox. 7:00 PM)</li>
-</ul>
-</div>
-<p style="color:#666;font-size:0.9rem;" data-key="modal_valle_note"><strong>Incluye:</strong> Traslado, guiado, almuerzo buffet. <strong>No incluye:</strong> Entradas a sitios arqueológicos (se pueden añadir).</p>
-</div>
-</div>
-
-<div id="valle-sur" class="itinerary-modal">
-<div class="itinerary-content">
-<span class="itinerary-close" onclick="closeItinerary('valle-sur')">&times;</span>
-<h3 data-key="modal_tipon_title">🏺 Valle Sur - Itinerario</h3>
-<div class="itinerary-day">
-<h4 data-key="modal_tipon_day1">Día 1: Arqueología y Sistemas Hidráulicos Incas</h4>
-<ul>
-<li data-key="modal_tipon_li1">🚐 Traslado desde tu hotel en Cusco (8:30 AM aprox.)</li>
-<li data-key="modal_tipon_li2">🏛️ Visita a Tipón: impresionante complejo de andenes y canales de agua</li>
-<li data-key="modal_tipon_li3">⛪ Recorrido por la Iglesia de Andahuaylillas ("Capilla Sixtina de América")</li>
-<li data-key="modal_tipon_li4">🗿 Exploración de Pikillacta: ciudad pre-inca de la cultura Wari</li>
-<li data-key="modal_tipon_li5">👨‍🏫 Guiado profesional en español/inglés</li>
-<li data-key="modal_tipon_li6">🚐 Retorno a Cusco (aprox. 2:00 PM)</li>
-</ul>
-</div>
-<p style="color:#666;font-size:0.9rem;" data-key="modal_tipon_note"><strong>Incluye:</strong> Traslado, guiado. | <strong>No incluye: ALMUERZO</strong> | <strong>Nota:</strong> Entradas a sitios arqueológicos no incluidas (se pueden gestionar).</p>
-</div>
-</div>
-
-<div id="quelccaya" class="itinerary-modal">
-<div class="itinerary-content">
-<span class="itinerary-close" onclick="closeItinerary('quelccaya')">&times;</span>
-<h3 data-key="modal_quel_title">🧊 Glaciar de Quelccaya - Itinerario</h3>
-<div class="itinerary-day">
-<h4 data-key="modal_quel_day1">Día 1: Cusco → Quelccaya</h4>
-<ul>
-<li data-key="modal_quel_li1">🚐 Recolección desde tu hotel en Cusco (5:00 AM)</li>
-<li data-key="modal_quel_li2">🍳 Desayuno en ruta incluido</li>
-<li data-key="modal_quel_li3">🏔️ Traslado hacia la zona de Quelccaya (4-5 horas)</li>
-<li data-key="modal_quel_li4">🥾 Trekking de aproximación hacia el glaciar (3-4 horas)</li>
-<li data-key="modal_quel_li5">🍲 Almuerzo incluido</li>
-<li data-key="modal_quel_li6">🚐 Retorno a Cusco (aprox. 6:00 PM)</li>
-<li data-key="modal_quel_li7">🩹 Botiquín de primeros auxilios y oxígeno disponible</li>
-</ul>
-</div>
-<p style="color:#666;font-size:0.9rem;" data-key="modal_quel_note"><strong>Nivel de dificultad: Alto</strong> | <strong>Recomendaciones: Aclimatación mínima de 2 días en Cusco.</strong> Llevar ropa abrigadora para frío extremo necesario y protector solar.</p>
-</div>
-</div>
-
-<div id="waqrapukara" class="itinerary-modal">
-<div class="itinerary-content">
-<span class="itinerary-close" onclick="closeItinerary('waqrapukara')">&times;</span>
-<h3 data-key="modal_waq_title">🦅 Waqrapukara - Itinerario</h3>
-<div class="itinerary-day">
-<h4 data-key="modal_waq_day1">Día 1: Aventura al Templo del Cuerno</h4>
-<ul>
-<li data-key="modal_waq_li1">🚐 Recolección desde tu hotel en Cusco (6:00 AM)</li>
-<li data-key="modal_waq_li2">🍳 Desayuno ligero incluido en ruta</li>
-<li data-key="modal_waq_li3">🚙 Traslado hacia la comunidad de Accha (2.5 horas)</li>
-<li data-key="modal_waq_li4">🥾 Trekking hacia Waqrapukara (2 horas ida, dificultad moderada)</li>
-<li data-key="modal_waq_li5">🏰 Exploración guiada del complejo arqueológico</li>
-<li data-key="modal_waq_li6">📸 Tiempo libre para fotos panorámicas del cañón</li>
-<li data-key="modal_waq_li7">🥪 Almuerzo picnic incluido con vistas espectaculares</li>
-<li data-key="modal_waq_li8">🚐 Retorno a Cusco (aprox. 5:00 PM)</li>
-<li data-key="modal_waq_li9">🩹 Botiquín de primeros auxilios disponible</li>
-</ul>
-</div>
-<p style="color:#666;font-size:0.9rem;" data-key="modal_waq_note"><strong>Altitud:</strong> 3,800 - 4,200 msnm | <strong>Recomendación:</strong> Llevar protector solar, gorro y agua. Aclimatación sugerida de 1 día en Cusco.</p>
-</div>
-</div>
-
-<div id="atv" class="itinerary-modal">
-<div class="itinerary-content">
-<span class="itinerary-close" onclick="closeItinerary('atv')">&times;</span>
-<h3 data-key="modal_atv_title">🏍️ ATV Valle Sagrado - Itinerario</h3>
-<div class="itinerary-day">
-<h4 data-key="modal_atv_day1">Aventura en Cuatrimotos por el Valle Sagrado</h4>
-<ul>
-<li data-key="modal_atv_li1">🚐 Traslado desde Cusco al punto de partida en el Valle Sagrado</li>
-<li data-key="modal_atv_li2">⛑️ Briefing de seguridad y entrega de equipo completo (casco, guantes, etc.)</li>
-<li data-key="modal_atv_li3">🏍️ Recorrido en ATV por paisajes espectaculares (2-4 horas según paquete)</li>
-<li data-key="modal_atv_li4">🧂 Visita a Maras y/o Moray (según ruta seleccionada)</li>
-<li data-key="modal_atv_li5">📸 Paradas para fotos panorámicas en miradores naturales</li>
-<li data-key="modal_atv_li6">🩹 Botiquín de primeros auxilios y guía de soporte</li>
-<li data-key="modal_atv_li7">🚐 Retorno a Cusco</li>
-</ul>
-</div>
-<p style="color:#666;font-size:0.9rem;" data-key="modal_atv_note"><strong>Requisitos:</strong> Licencia de conducir válida. <strong>No recomendado para:</strong> embarazadas o personas con problemas de espalda.</p>
-</div>
-</div>
-
-<!-- Video -->
+<!-- Video ✅ CON CAJA CUADRADA -->
 <section class="videos" id="video">
 <div class="container">
-<h2 class="section-title" style="text-align:center;" data-key="video_title">Conoce Nuestros Destinos</h2>
+<div class="video-box">
+<h2 class="section-title" data-key="video_title">Conoce Nuestros Destinos</h2>
 <div class="video-wrapper fade-in">
 <div class="video-container">
 <iframe src="https://www.youtube.com/embed/00ztLEOqZrk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
 </div>
+</div>
 </section>
 
-<!-- Gallery -->
+<!-- Gallery ✅ CON CAJA CUADRADA -->
 <section class="gallery" id="galeria">
 <div class="container">
-<h2 class="section-title" style="text-align:center;" data-key="gallery_title">Galería de Imágenes</h2>
+<div class="gallery-box">
+<h2 class="section-title" data-key="gallery_title">Galería de Imágenes</h2>
 <div class="gallery-grid">
 <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/49d473206-559a-4a9b-a6af-61954424c8e57192.png" alt="Machu Picchu Amanecer"><div class="gallery-overlay">Machu Picchu</div></div>
 <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/39d473206-559a-4a9b-a6af-61954424c8e54335.png" alt="Machu Picchu Sunset"><div class="gallery-overlay">Atardecer Inca</div></div>
@@ -648,25 +717,25 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/570e52377-ca3b-4aed-b342-08f0c6e710d34205.png" alt="Sacsayhuamán Fortress"><div class="gallery-overlay">Fortaleza Inca</div></div>
 <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/37c16c9cd-bf62-4a5b-b667-70ee5c92c2656865.png" alt="Ollantaytambo"><div class="gallery-overlay">Ollantaytambo</div></div>
 <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/770e52377-ca3b-4aed-b342-08f0c6e710d39570.png" alt="Tipon"><div class="gallery-overlay">Tipón</div></div>
-<div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/470e52377-ca3b-4aed-b342-08f0c6e710d33931.png" alt="Tipon Terraces"><div class="gallery-overlay">Andenes de Tipón</div></div>
 <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/49d473206-559a-4a9b-a6af-61954424c8e51355.png" alt="Humantay"><div class="gallery-overlay">Laguna Humantay</div></div>
-<div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/59d473206-559a-4a9b-a6af-61954424c8e58055.png" alt="Humantay Nevados"><div class="gallery-overlay">Nevados Andinos</div></div>
 <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/39d473206-559a-4a9b-a6af-61954424c8e54739.png" alt="7 Colores"><div class="gallery-overlay">Vinicunca</div></div>
-<div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/29d473206-559a-4a9b-a6af-61954424c8e57370.png" alt="Rainbow Mountain"><div class="gallery-overlay">Montaña Arcoiris</div></div>
 <div class="gallery-item"><img src="https://image.qwenlm.ai/public_source/3eea2e63-99ca-482f-af15-ec9ee53725fc/57c16c9cd-bf62-4a5b-b667-70ee5c92c2659702.png" alt="ATV"><div class="gallery-overlay">Aventura ATV</div></div>
+</div>
 </div>
 </div>
 </section>
 
-<!-- Why Choose Us -->
+<!-- Why Choose Us ✅ CON CAJA CUADRADA -->
 <section class="why-us">
 <div class="container">
-<h2 class="section-title" style="text-align:center;" data-key="why_us_title">¿Por Qué Elegirnos?</h2>
+<div class="why-us-box">
+<h2 class="section-title" data-key="why_us_title">¿Por Qué Elegirnos?</h2>
 <div class="features-grid">
-<div class="feature-box fade-in"><i class="fas fa-award"></i><h3 data-key="feat_experience">Experiencia</h3><p data-key="feat_experience_text">Años de experiencia brindando los mejores servicios turísticos en Cusco y alrededores.</p></div>
-<div class="feature-box fade-in"><i class="fas fa-users"></i><h3 data-key="feat_guides">Guías Expertos</h3><p data-key="feat_guides_text">Guías profesionales bilingües con amplio conocimiento de la cultura inca.</p></div>
-<div class="feature-box fade-in"><i class="fas fa-shield-alt"></i><h3 data-key="feat_security">Seguridad</h3><p data-key="feat_security_text">Tu seguridad es nuestra prioridad. Contamos con todos los seguros necesarios.</p></div>
-<div class="feature-box fade-in"><i class="fas fa-hand-holding-usd"></i><h3 data-key="feat_price">Mejor Precio</h3><p data-key="feat_price_text">Ofrecemos los mejores precios del mercado sin comprometer la calidad.</p></div>
+<div class="feature-box fade-in"><i class="fas fa-award"></i><h3 data-key="feat_experience">Experiencia</h3><p data-key="feat_experience_text">Años de experiencia brindando los mejores servicios turísticos.</p></div>
+<div class="feature-box fade-in"><i class="fas fa-users"></i><h3 data-key="feat_guides">Guías Expertos</h3><p data-key="feat_guides_text">Guías profesionales bilingües con amplio conocimiento.</p></div>
+<div class="feature-box fade-in"><i class="fas fa-shield-alt"></i><h3 data-key="feat_security">Seguridad</h3><p data-key="feat_security_text">Tu seguridad es nuestra prioridad. Todos los seguros necesarios.</p></div>
+<div class="feature-box fade-in"><i class="fas fa-hand-holding-usd"></i><h3 data-key="feat_price">Mejor Precio</h3><p data-key="feat_price_text">Mejores precios sin comprometer la calidad.</p></div>
+</div>
 </div>
 </div>
 </section>
@@ -678,25 +747,19 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 <div class="contact-content">
 <div class="contact-info">
 <h3 data-key="contact_subtitle">¡Reserva tu aventura hoy!</h3>
-<p data-key="contact_text" style="margin-bottom:2rem;font-size:1.2rem;line-height:1.8;">Estamos listos para hacer realidad tu sueño de conocer el Perú. Escríbenos y te responderemos a la brevedad.</p>
-<div class="contact-item"><i class="fab fa-whatsapp"></i><div><div style="font-size:0.9rem;opacity:0.9;" data-key="label_whatsapp">WhatsApp / Celular</div><div style="font-weight:700;">+51 979 051 320</div></div></div>
-<div class="contact-item"><i class="fas fa-envelope"></i><div><div style="font-size:0.9rem;opacity:0.9;" data-key="label_email">Correo Electrónico</div><div style="font-weight:700;">viajes.by.stefan@gmail.com</div></div></div>
-<div class="contact-item"><i class="fas fa-map-marker-alt"></i><span data-key="label_address">Urb. Tupac Amaru S-18, Cusco, Perú</span></div>
-<div class="contact-item"><i class="fas fa-clock"></i><span data-key="label_hours">Atención 24/7</span></div>
-<div class="social-links" style="margin-top:2.5rem;">
-<a href="https://wa.me/51979051320" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<a href="#"><i class="fab fa-facebook"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="mailto:viajes.by.stefan@gmail.com"><i class="fas fa-envelope"></i></a>
-</div>
+<p data-key="contact_text" style="margin-bottom:2rem;font-size:1.2rem;line-height:1.8;">Estamos listos para hacer realidad tu sueño de conocer el Perú.</p>
+<div class="contact-item"><i class="fab fa-whatsapp"></i><div><div style="font-size:0.9rem;opacity:0.9;">WhatsApp / Celular</div><div style="font-weight:700;">+51 979 051 320</div></div></div>
+<div class="contact-item"><i class="fas fa-envelope"></i><div><div style="font-size:0.9rem;opacity:0.9;">Correo Electrónico</div><div style="font-weight:700;">viajes.by.stefan@gmail.com</div></div></div>
+<div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Urb. Tupac Amaru S-18, Cusco, Perú</span></div>
+<div class="contact-item"><i class="fas fa-clock"></i><span>Atención 24/7</span></div>
 </div>
 <div class="contact-form">
 <form>
-<div class="form-group"><label data-key="form_name">Nombre Completo</label><input type="text" placeholder="Tu nombre" required></div>
-<div class="form-group"><label data-key="form_email">Correo Electrónico</label><input type="email" placeholder="tu@email.com" required></div>
-<div class="form-group"><label data-key="form_phone">Teléfono / WhatsApp</label><input type="tel" placeholder="+51 999 888 777"></div>
-<div class="form-group"><label data-key="form_tour">Tour de Interés</label><input type="text" placeholder="¿Qué tour te interesa?"></div>
-<div class="form-group"><label data-key="form_message">Mensaje</label><textarea rows="4" placeholder="Cuéntanos más sobre tu viaje..."></textarea></div>
+<div class="form-group"><label>Nombre Completo</label><input type="text" placeholder="Tu nombre" required></div>
+<div class="form-group"><label>Correo Electrónico</label><input type="email" placeholder="tu@email.com" required></div>
+<div class="form-group"><label>Teléfono / WhatsApp</label><input type="tel" placeholder="+51 999 888 777"></div>
+<div class="form-group"><label>Tour de Interés</label><input type="text" placeholder="¿Qué tour te interesa?"></div>
+<div class="form-group"><label>Mensaje</label><textarea rows="4" placeholder="Cuéntanos más sobre tu viaje..."></textarea></div>
 <button type="submit" class="submit-btn" data-key="btn_send">Enviar Mensaje</button>
 </form>
 </div>
@@ -715,24 +778,20 @@ footer { background: #1a1a2e; color: white; text-align: center; padding: 3rem 2r
 <p style="font-size:1.2rem;margin-bottom:0.5rem;font-family:'Playfair Display',serif;font-weight:700;">VIAJES CON STEFAN</p>
 <p style="font-style:italic;margin-bottom:1rem;opacity:0.9;">Your Journey Begins Here</p>
 <p>&copy; 2026 <span data-key="footer_rights">Todos los derechos reservados.</span></p>
-<p style="margin-top:1rem;font-size:0.9rem;opacity:0.8;"><i class="fas fa-phone"></i> +51 979 051 320 | <i class="fas fa-envelope"></i> viajes.by.stefan@gmail.com</p>
 </footer>
 
+<!-- Itinerary Modals -->
+<div id="mp-full-day" class="itinerary-modal"><div class="itinerary-content"><span class="itinerary-close" onclick="closeItinerary('mp-full-day')">&times;</span><h3>🗓️ Machu Picchu Full Day</h3><div class="itinerary-day"><h4>Día 1</h4><ul><li>🚌 Traslado Cusco → Ollantaytambo</li><li>🚂 Tren a Aguas Calientes</li><li>🚌 Bus a Machu Picchu</li><li>👨‍🏫 Guiado privado</li></ul></div></div></div>
+<div id="city-tour" class="itinerary-modal"><div class="itinerary-content"><span class="itinerary-close" onclick="closeItinerary('city-tour')">&times;</span><h3>🏙️ City Tour Cusco</h3><div class="itinerary-day"><h4>Medio Día</h4><ul><li>⛪ Qoricancha</li><li>🏰 Sacsayhuamán</li><li>🗿 Q'enqo, Puka Pukara</li></ul></div></div></div>
+<div id="valle-sagrado" class="itinerary-modal"><div class="itinerary-content"><span class="itinerary-close" onclick="closeItinerary('valle-sagrado')">&times;</span><h3>🏔️ Valle Sagrado VIP</h3><div class="itinerary-day"><h4>Día 1</h4><ul><li>🧵 Chinchero</li><li>🧂 Salineras de Maras</li><li>🌀 Moray</li><li>🏰 Ollantaytambo</li></ul></div></div></div>
+<div id="vinicunca" class="itinerary-modal"><div class="itinerary-content"><span class="itinerary-close" onclick="closeItinerary('vinicunca')">&times;</span><h3>🌈 Montaña Vinicunca</h3><div class="itinerary-day"><h4>Día 1</h4><ul><li>🚐 Recolección 5:00 AM</li><li>🥾 Trekking</li><li>🥪 Almuerzo incluido</li></ul></div></div></div>
+<div id="humantay" class="itinerary-modal"><div class="itinerary-content"><span class="itinerary-close" onclick="closeItinerary('humantay')">&times;</span><h3>💧 Laguna Humantay</h3><div class="itinerary-day"><h4>Día 1</h4><ul><li>🚐 Recolección 5:00 AM</li><li>🥾 Caminata 1.5-2h</li><li>🥪 Almuerzo incluido</li></ul></div></div></div>
+<div id="atv" class="itinerary-modal"><div class="itinerary-content"><span class="itinerary-close" onclick="closeItinerary('atv')">&times;</span><h3>🏍️ ATV Valle Sagrado</h3><div class="itinerary-day"><h4>Aventura ATV</h4><ul><li>⛑️ Briefing de seguridad</li><li>🏍️ Recorrido 2-4h</li><li>🧂 Visita a Maras/Moray</li></ul></div></div></div>
+
 <script>
-// 🔹 Language Switcher - Single Click Toggle
-function toggleLangDropdown() {
-  document.getElementById('langDropdown').classList.toggle('active');
-}
+function toggleLangDropdown() { document.getElementById('langDropdown').classList.toggle('active'); }
+document.addEventListener('click', function(e) { if (!document.querySelector('.language-switcher').contains(e.target)) document.getElementById('langDropdown').classList.remove('active'); });
 
-// Close dropdown when clicking outside
-document.addEventListener('click', function(e) {
-  const langSwitcher = document.querySelector('.language-switcher');
-  if (!langSwitcher.contains(e.target)) {
-    document.getElementById('langDropdown').classList.remove('active');
-  }
-});
-
-// Translations
 const translations = {
   es: {
     nav_home: "Inicio", nav_tours: "Tours", nav_video: "Video", nav_gallery: "Galería", nav_contact: "Contacto",
@@ -743,170 +802,46 @@ const translations = {
     video_title: "Conoce Nuestros Destinos", gallery_title: "Galería de Imágenes",
     why_us_title: "¿Por Qué Elegirnos?",
     contact_title: "Contáctanos", contact_subtitle: "¡Reserva tu aventura hoy!",
-    contact_text: "Estamos listos para hacer realidad tu sueño de conocer el Perú. Escríbenos y te responderemos a la brevedad.",
-    label_whatsapp: "WhatsApp / Celular", label_email: "Correo Electrónico",
-    label_address: "Urb. Tupac Amaru S-18, Cusco, Perú", label_hours: "Atención 24/7",
-    footer_rights: "Todos los derechos reservados.",
+    contact_text: "Estamos listos para hacer realidad tu sueño de conocer el Perú.",
     btn_book: "Reservar Ahora", btn_itinerary: "Ver Itinerario", btn_send: "Enviar Mensaje",
     badge_popular: "Más Popular", badge_must_see: "Imperdible", badge_adventure: "Aventura",
-    badge_nature: "Naturaleza", badge_culture: "Cultura Inca", badge_archaeology: "Arqueología",
-    badge_extreme: "Aventura Extrema", badge_expedition: "Expedición",
-    dur_1day: "1 Día", dur_half: "Medio Día",
-    incl_tickets: "Entradas Incluidas", incl_lunch: "Almuerzo", incl_guide: "Guía Profesional", incl_transport: "Transporte",
-    incl_meals: "Desayuno + Almuerzo", incl_firstaid: "Primeros Auxilios", incl_atv: "ATV Incluido", incl_equipment: "Equipo Completo",
-    feat_trekking: "Trekking", feat_photos: "Fotos Increíbles", feat_fortress: "Fortaleza Inca", feat_inca_town: "Pueblo Inca",
-    feat_hydraulic: "Sistema Hidráulico", feat_terraces: "Andenes Incas",
-    tour_machu_desc: "Vive la experiencia de conocer una de las 7 maravillas del mundo moderno. Explora la ciudadela inca más famosa del planeta con nuestros guías expertos.",
-    tour_city_desc: "Recorre la ciudad imperial del Cusco y visita la impresionante fortaleza de Sacsayhuamán con sus enormes piedras perfectamente encajadas. Incluye Qorikancha, Catedral, Q'enqo, Puka Pukara y Tambomachay.",
-    tour_vini_desc: "Descubre la mágica Vinicunca, la montaña multicolor que te dejará sin aliento. Una experiencia única a 5,200 msnm en los Andes peruanos.",
-    tour_hum_desc: "Contempla las aguas turquesas de la laguna Humantay rodeada de imponentes nevados. Un paisaje de ensueño en el corazón de los Andes.",
-    tour_valle_desc: "Explora Chinchero con una visita por Moray y las Salineras de Maras, para adentrarse al Valle Sagrado de los Incas con la impresionante fortaleza de Ollantaytambo, el complejo arqueológico de Pisac y un ejemplo perfecto de la arquitectura inca.",
-    tour_tipon_desc: "Descubre Tipón, el templo del agua inca con sus impresionantes sistemas hidráulicos que aún funcionan después de 500 años. Un sitio arqueológico único con andenes y fuentes de agua cristalina.",
-    tour_quel_desc: "Adéntrate en una expedición única hacia el glaciar tropical más grande del mundo. Paisajes glaciares, lagunas altoandinas y aventura extrema en los Andes peruanos.",
-    tour_waq_desc: "Descubre la impresionante fortaleza en forma de cuerno de Waqrapukara, un sitio arqueológico poco conocido con vistas espectaculares al cañón del Apurímac.",
-    tour_atv_desc: "Vive la adrenalina de recorrer los paisajes más espectaculares del Valle Sagrado en cuatrimotos. Visita Maras, Moray y pueblos andinos con vistas panorámicas increíbles.",
-    feat_experience: "Experiencia", feat_experience_text: "Años de experiencia brindando los mejores servicios turísticos en Cusco y alrededores.",
-    feat_guides: "Guías Expertos", feat_guides_text: "Guías profesionales bilingües con amplio conocimiento de la cultura inca.",
-    feat_security: "Seguridad", feat_security_text: "Tu seguridad es nuestra prioridad. Contamos con todos los seguros necesarios.",
-    feat_price: "Mejor Precio", feat_price_text: "Ofrecemos los mejores precios del mercado sin comprometer la calidad.",
-    form_name: "Nombre Completo", form_email: "Correo Electrónico", form_phone: "Teléfono / WhatsApp",
-    form_tour: "Tour de Interés", form_message: "Mensaje",
-    // Itinerarios ES
-    modal_machu_title: "🗓️ Machu Picchu Full Day - Itinerario", modal_machu_day1: "Día 1: Cusco → Machu Picchu",
-    modal_machu_li1: "🚌 Traslado desde el hotel en Cusco a Ollantaytambo", modal_machu_li2: "🚂 Traslado en tren desde Ollantaytambo a Aguas Calientes",
-    modal_machu_li3: "🚌 Ticket de bus de subida a la ciudadela de Machu Picchu", modal_machu_li4: "🎫 Ingreso a Machu Picchu con horario asignado",
-    modal_machu_li5: "👨‍🏫 Guiado privado en español/inglés (2.5 - 3 horas de recorrido)", modal_machu_li6: "📸 Tiempo libre para fotos y exploración",
-    modal_machu_li7: "🚌 Bus de bajada a Aguas Calientes", modal_machu_li8: "🚂 Retorno en tren a Ollantaytambo", modal_machu_li9: "🚌 Traslado de retorno a su hotel en Cusco",
-    modal_machu_note: "<strong>Nota:</strong> ALMUERZO NO INCLUIDO. | <strong>Recomendamos:</strong> Reservar con anticipación por CUPOS LIMITADOS.",
-    modal_city_title: "🏙️ City Tour Cusco - Itinerario", modal_city_day1: "Medio Día: Recorrido por la Ciudad Imperial",
-    modal_city_li1: "🚐 Traslado desde tu hotel en Cusco", modal_city_li2: "⛪ Inicia la visita en Qoricancha (Templo del Sol)",
-    modal_city_li3: "🏰 Exploración de Sacsayhuamán: fortaleza inca con piedras monumentales", modal_city_li4: "🗿 Recorrido por Q'enqo, Puka Pukara y Tambomachay",
-    modal_city_li5: "👨‍🏫 Guiado profesional en español/inglés durante todo el recorrido", modal_city_li6: "🚐 Retorno a Cusco",
-    modal_city_note: "<strong>Salida:</strong> 7:30 AM o 2:00 PM (según disponibilidad) | <strong>No incluye:</strong> Entradas a sitios arqueológicos (se pueden añadir).",
-    modal_vini_title: "🌈 Montaña Vinicunca - Itinerario", modal_vini_day1: "Día 1: Aventura a la Montaña de 7 Colores",
-    modal_vini_li1: "🚐 Recolección desde tu hotel en Cusco (5:00 AM aprox.)", modal_vini_li2: "🍳 Desayuno en ruta incluido",
-    modal_vini_li3: "🥾 Trekking hacia Vinicunca (3-4 horas ida, dificultad moderada-alta)", modal_vini_li4: "📸 Tiempo en la cima para fotos panorámicas (5,200 msnm)",
-    modal_vini_li5: "🥪 Almuerzo buffet incluido al retorno", modal_vini_li6: "🩹 Botiquín de primeros auxilios y oxígeno disponible", modal_vini_li7: "🚐 Retorno a Cusco (aprox. 5:30 PM)",
-    modal_vini_note: "<strong>Recomendación:</strong> Aclimatación mínima de 2 días en Cusco. | <strong>Incluye:</strong> Traslado, guiado, desayuno y almuerzo.| <strong>Opción de caballo disponible (costo extra)</strong>.",
-    modal_hum_title: "💧 Laguna Humantay - Itinerario", modal_hum_day1: "Día 1: Trekking a la Laguna Turquesa",
-    modal_hum_li1: "🚐 Recolección desde tu hotel en Cusco (5:00 AM aprox.)", modal_hum_li2: "🍳 Desayuno incluido en ruta",
-    modal_hum_li3: "🥾 Caminata hacia la laguna Humantay (1.5-2 horas ida, dificultad moderada)", modal_hum_li4: "📸 Tiempo libre para disfrutar el paisaje (4,200 msnm)",
-    modal_hum_li5: "🥪 Almuerzo buffet incluido", modal_hum_li6: "🩹 Botiquín de primeros auxilios y personal capacitado", modal_hum_li7: "🚐 Retorno a Cusco (aprox. 6:00 PM)",
-    modal_hum_note: "<strong>Recomendación:</strong> Llevar ropa abrigadora y protector solar. | <strong>Incluye:</strong> Traslado, guiado, desayuno y almuerzo.| <strong>Opción de caballo disponible (costo extra)</strong>.",
-    modal_valle_title: "🏔️ Valle Sagrado VIP - Itinerario", modal_valle_day1: "Día 1: Ruta Completa del Valle Sagrado",
-    modal_valle_li1: "🚐 Recolección desde tu hotel en Cusco (7:00 AM aprox.)", modal_valle_li2: "🧵 Visita a Chinchero: mercado artesanal y iglesia colonial",
-    modal_valle_li3: "🧂 Recorrido por las Salineras de Maras (miles de pozas de sal)", modal_valle_li4: "🌀 Exploración de Moray: laboratorios agrícolas incas",
-    modal_valle_li5: "🍽️ Almuerzo buffet incluido en restaurante local", modal_valle_li6: "🏰 Visita a Ollantaytambo: fortaleza y pueblo inca viviente",
-    modal_valle_li7: "🗿 Visita Pisac: centro arqueologico de impresionantes andenes agricolas", modal_valle_li8: "👨‍🏫 Guiado profesional durante todo el recorrido", modal_valle_li9: "🚐 Retorno a Cusco (aprox. 7:00 PM)",
-    modal_valle_note: "<strong>Incluye:</strong> Traslado, guiado, almuerzo buffet. <strong>No incluye:</strong> Entradas a sitios arqueológicos (se pueden añadir).",
-    modal_tipon_title: "🏺 Valle Sur - Itinerario", modal_tipon_day1: "Día 1: Arqueología y Sistemas Hidráulicos Incas",
-    modal_tipon_li1: "🚐 Traslado desde tu hotel en Cusco (8:30 AM aprox.)", modal_tipon_li2: "🏛️ Visita a Tipón: impresionante complejo de andenes y canales de agua",
-    modal_tipon_li3: "⛪ Recorrido por la Iglesia de Andahuaylillas (\"Capilla Sixtina de América\")", modal_tipon_li4: "🗿 Exploración de Pikillacta: ciudad pre-inca de la cultura Wari",
-    modal_tipon_li5: "👨‍🏫 Guiado profesional en español/inglés", modal_tipon_li6: "🚐 Retorno a Cusco (aprox. 2:00 PM)",
-    modal_tipon_note: "<strong>Incluye:</strong> Traslado, guiado. | <strong>No incluye: ALMUERZO</strong> | <strong>Nota:</strong> Entradas a sitios arqueológicos no incluidas (se pueden gestionar).",
-    modal_quel_title: "🧊 Glaciar de Quelccaya - Itinerario", modal_quel_day1: "Día 1: Cusco → Quelccaya",
-    modal_quel_li1: "🚐 Recolección desde tu hotel en Cusco (5:00 AM)", modal_quel_li2: "🍳 Desayuno en ruta incluido",
-    modal_quel_li3: "🏔️ Traslado hacia la zona de Quelccaya (4-5 horas)", modal_quel_li4: "🥾 Trekking de aproximación hacia el glaciar (3-4 horas)",
-    modal_quel_li5: "🍲 Almuerzo incluido", modal_quel_li6: "🚐 Retorno a Cusco (aprox. 6:00 PM)", modal_quel_li7: "🩹 Botiquín de primeros auxilios y oxígeno disponible",
-    modal_quel_note: "<strong>Nivel de dificultad: Alto</strong> | <strong>Recomendaciones: Aclimatación mínima de 2 días en Cusco.</strong> Llevar ropa abrigadora para frío extremo necesario y protector solar.",
-    modal_waq_title: "🦅 Waqrapukara - Itinerario", modal_waq_day1: "Día 1: Aventura al Templo del Cuerno",
-    modal_waq_li1: "🚐 Recolección desde tu hotel en Cusco (6:00 AM)", modal_waq_li2: "🍳 Desayuno ligero incluido en ruta",
-    modal_waq_li3: "🚙 Traslado hacia la comunidad de Accha (2.5 horas)", modal_waq_li4: "🥾 Trekking hacia Waqrapukara (2 horas ida, dificultad moderada)",
-    modal_waq_li5: "🏰 Exploración guiada del complejo arqueológico", modal_waq_li6: "📸 Tiempo libre para fotos panorámicas del cañón",
-    modal_waq_li7: "🥪 Almuerzo picnic incluido con vistas espectaculares", modal_waq_li8: "🚐 Retorno a Cusco (aprox. 5:00 PM)", modal_waq_li9: "🩹 Botiquín de primeros auxilios disponible",
-    modal_waq_note: "<strong>Altitud:</strong> 3,800 - 4,200 msnm | <strong>Recomendación:</strong> Llevar protector solar, gorro y agua. Aclimatación sugerida de 1 día en Cusco.",
-    modal_atv_title: "🏍️ ATV Valle Sagrado - Itinerario", modal_atv_day1: "Aventura en Cuatrimotos por el Valle Sagrado",
-    modal_atv_li1: "🚐 Traslado desde Cusco al punto de partida en el Valle Sagrado", modal_atv_li2: "⛑️ Briefing de seguridad y entrega de equipo completo (casco, guantes, etc.)",
-    modal_atv_li3: "🏍️ Recorrido en ATV por paisajes espectaculares (2-4 horas según paquete)", modal_atv_li4: "🧂 Visita a Maras y/o Moray (según ruta seleccionada)",
-    modal_atv_li5: "📸 Paradas para fotos panorámicas en miradores naturales", modal_atv_li6: "🩹 Botiquín de primeros auxilios y guía de soporte", modal_atv_li7: "🚐 Retorno a Cusco",
-    modal_atv_note: "<strong>Requisitos:</strong> Licencia de conducir válida. <strong>No recomendado para:</strong> embarazadas o personas con problemas de espalda."
+    badge_nature: "Naturaleza", badge_culture: "Cultura Inca", badge_extreme: "Aventura Extrema",
+    tour_machu_desc: "Vive la experiencia de conocer una de las 7 maravillas del mundo moderno.",
+    tour_city_desc: "Recorre la ciudad imperial del Cusco y visita la impresionante fortaleza de Sacsayhuamán.",
+    tour_valle_desc: "Explora Chinchero, Moray, Salineras de Maras y Ollantaytambo.",
+    tour_vini_desc: "Descubre la mágica Vinicunca, la montaña multicolor a 5,036 msnm.",
+    tour_hum_desc: "Contempla las aguas turquesas de la laguna Humantay rodeada de nevados.",
+    tour_atv_desc: "Vive la adrenalina de recorrer el Valle Sagrado en cuatrimotos.",
+    feat_experience: "Experiencia", feat_experience_text: "Años de experiencia brindando los mejores servicios turísticos.",
+    feat_guides: "Guías Expertos", feat_guides_text: "Guías profesionales bilingües con amplio conocimiento.",
+    feat_security: "Seguridad", feat_security_text: "Tu seguridad es nuestra prioridad. Todos los seguros necesarios.",
+    feat_price: "Mejor Precio", feat_price_text: "Mejores precios sin comprometer la calidad.",
+    footer_rights: "Todos los derechos reservados."
   },
   en: {
     nav_home: "Home", nav_tours: "Tours", nav_video: "Video", nav_gallery: "Gallery", nav_contact: "Contact",
     hero_title: "VIAJES CON STEFAN", hero_subtitle: "Your Journey Begins Here", hero_cta: "Explore Our Tours",
     about_title: "Discover the Magic of Cusco",
-    about_text: "At Viajes Con Stefan we offer unique and unforgettable experiences in the most spectacular destinations in Peru. From the majestic Machu Picchu to the colorful mountains of the Andes, we live making your adventure dreams come true.",
+    about_text: "At Viajes Con Stefan we offer unique and unforgettable experiences in Peru's most spectacular destinations.",
     tours_title: "Our Tour Packages",
     video_title: "Discover Our Destinations", gallery_title: "Image Gallery",
     why_us_title: "Why Choose Us?",
     contact_title: "Contact Us", contact_subtitle: "Book your adventure today!",
-    contact_text: "We are ready to make your dream of visiting Peru come true. Write to us and we will respond as soon as possible.",
-    label_whatsapp: "WhatsApp / Phone", label_email: "Email",
-    label_address: "Urb. Tupac Amaru S-18, Cusco, Peru", label_hours: "24/7 Support",
-    footer_rights: "All rights reserved.",
+    contact_text: "We are ready to make your dream of visiting Peru come true.",
     btn_book: "Book Now", btn_itinerary: "View Itinerary", btn_send: "Send Message",
     badge_popular: "Most Popular", badge_must_see: "Must See", badge_adventure: "Adventure",
-    badge_nature: "Nature", badge_culture: "Inca Culture", badge_archaeology: "Archaeology",
-    badge_extreme: "Extreme Adventure", badge_expedition: "Expedition",
-    dur_1day: "1 Day", dur_half: "Half Day",
-    incl_tickets: "Tickets Included", incl_lunch: "Lunch", incl_guide: "Professional Guide", incl_transport: "Transport",
-    incl_meals: "Breakfast + Lunch", incl_firstaid: "First Aid", incl_atv: "ATV Included", incl_equipment: "Full Equipment",
-    feat_trekking: "Trekking", feat_photos: "Amazing Photos", feat_fortress: "Inca Fortress", feat_inca_town: "Inca Town",
-    feat_hydraulic: "Hydraulic System", feat_terraces: "Inca Terraces",
-    tour_machu_desc: "Live the experience of visiting one of the 7 wonders of the modern world. Explore the most famous Inca citadel on the planet with our expert guides.",
-    tour_city_desc: "Tour the imperial city of Cusco and visit the impressive fortress of Sacsayhuamán with its enormous perfectly fitted stones. Includes Qorikancha, Cathedral, Q'enqo, Puka Pukara and Tambomachay.",
-    tour_vini_desc: "Discover the magical Vinicunca, the multicolored mountain that will leave you breathless. A unique experience at 5,200 masl in the Peruvian Andes.",
-    tour_hum_desc: "Contemplate the turquoise waters of Humantay lagoon surrounded by imposing snow-capped peaks. A dreamlike landscape in the heart of the Andes.",
-    tour_valle_desc: "Explore Chinchero with a visit to Moray and the Maras Salt Mines, to enter the Sacred Valley of the Incas with the impressive fortress of Ollantaytambo, the archaeological complex of Pisac and a perfect example of Inca architecture.",
-    tour_tipon_desc: "Discover Tipón, the Inca water temple with its impressive hydraulic systems that still work after 500 years. A unique archaeological site with terraces and crystal clear water fountains.",
-    tour_quel_desc: "Embark on a unique expedition to the largest tropical glacier in the world. Glacial landscapes, high-Andean lagoons and extreme adventure in the Peruvian Andes.",
-    tour_waq_desc: "Discover the impressive horn-shaped fortress of Waqrapukara, a little-known archaeological site with spectacular views of the Apurímac canyon.",
-    tour_atv_desc: "Experience the adrenaline of touring the most spectacular landscapes of the Sacred Valley on ATVs. Visit Maras, Moray and Andean towns with incredible panoramic views.",
-    feat_experience: "Experience", feat_experience_text: "Years of experience providing the best tourist services in Cusco and surrounding areas.",
-    feat_guides: "Expert Guides", feat_guides_text: "Professional bilingual guides with extensive knowledge of Inca culture.",
-    feat_security: "Security", feat_security_text: "Your safety is our priority. We have all necessary insurance.",
-    feat_price: "Best Price", feat_price_text: "We offer the best prices on the market without compromising quality.",
-    form_name: "Full Name", form_email: "Email", form_phone: "Phone / WhatsApp",
-    form_tour: "Tour of Interest", form_message: "Message",
-    // Itineraries EN
-    modal_machu_title: "🗓️ Machu Picchu Full Day - Itinerary", modal_machu_day1: "Day 1: Cusco → Machu Picchu",
-    modal_machu_li1: "🚌 Transfer from your hotel in Cusco to Ollantaytambo", modal_machu_li2: "🚂 Train transfer from Ollantaytambo to Aguas Calientes",
-    modal_machu_li3: "🚌 Bus ticket up to Machu Picchu citadel", modal_machu_li4: "🎫 Entrance to Machu Picchu with assigned time",
-    modal_machu_li5: "👨‍🏫 Private guide in Spanish/English (2.5 - 3 hours tour)", modal_machu_li6: "📸 Free time for photos and exploration",
-    modal_machu_li7: "🚌 Bus down to Aguas Calientes", modal_machu_li8: "🚂 Train return to Ollantaytambo", modal_machu_li9: "🚌 Transfer back to your hotel in Cusco",
-    modal_machu_note: "<strong>Note:</strong> LUNCH NOT INCLUDED. | <strong>We recommend:</strong> Book in advance due to LIMITED SPOTS.",
-    modal_city_title: "🏙️ City Tour Cusco - Itinerary", modal_city_day1: "Half Day: Tour of the Imperial City",
-    modal_city_li1: "🚐 Transfer from your hotel in Cusco", modal_city_li2: "⛪ Start the visit at Qoricancha (Temple of the Sun)",
-    modal_city_li3: "🏰 Exploration of Sacsayhuamán: Inca fortress with monumental stones", modal_city_li4: "🗿 Tour of Q'enqo, Puka Pukara and Tambomachay",
-    modal_city_li5: "👨‍🏫 Professional guide in Spanish/English throughout the tour", modal_city_li6: "🚐 Return to Cusco",
-    modal_city_note: "<strong>Departure:</strong> 7:30 AM or 2:00 PM (subject to availability) | <strong>Not included:</strong> Entrance fees to archaeological sites (can be added).",
-    modal_vini_title: "🌈 Vinicunca Mountain - Itinerary", modal_vini_day1: "Day 1: Adventure to the 7 Colors Mountain",
-    modal_vini_li1: "🚐 Pick up from your hotel in Cusco (5:00 AM approx.)", modal_vini_li2: "🍳 Breakfast on the route included",
-    modal_vini_li3: "🥾 Trekking to Vinicunca (3-4 hours one way, moderate-high difficulty)", modal_vini_li4: "📸 Time at the summit for panoramic photos (5,200 masl)",
-    modal_vini_li5: "🥪 Buffet lunch included on return", modal_vini_li6: "🩹 First aid kit and oxygen available", modal_vini_li7: "🚐 Return to Cusco (approx. 5:30 PM)",
-    modal_vini_note: "<strong>Recommendation:</strong> Minimum acclimatization of 2 days in Cusco. | <strong>Includes:</strong> Transfer, guide, breakfast and lunch.| <strong>Horse option available (extra cost)</strong>.",
-    modal_hum_title: "💧 Humantay Lagoon - Itinerary", modal_hum_day1: "Day 1: Trekking to the Turquoise Lagoon",
-    modal_hum_li1: "🚐 Pick up from your hotel in Cusco (5:00 AM approx.)", modal_hum_li2: "🍳 Breakfast included on the route",
-    modal_hum_li3: "🥾 Hike to Humantay lagoon (1.5-2 hours one way, moderate difficulty)", modal_hum_li4: "📸 Free time to enjoy the landscape (4,200 masl)",
-    modal_hum_li5: "🥪 Buffet lunch included", modal_hum_li6: "🩹 First aid kit and trained staff", modal_hum_li7: "🚐 Return to Cusco (approx. 6:00 PM)",
-    modal_hum_note: "<strong>Recommendation:</strong> Bring warm clothes and sunscreen. | <strong>Includes:</strong> Transfer, guide, breakfast and lunch.| <strong>Horse option available (extra cost)</strong>.",
-    modal_valle_title: "🏔️ Sacred Valley VIP - Itinerary", modal_valle_day1: "Day 1: Complete Route of the Sacred Valley",
-    modal_valle_li1: "🚐 Pick up from your hotel in Cusco (7:00 AM approx.)", modal_valle_li2: "🧵 Visit to Chinchero: artisan market and colonial church",
-    modal_valle_li3: "🧂 Tour of the Maras Salt Mines (thousands of salt ponds)", modal_valle_li4: "🌀 Exploration of Moray: Inca agricultural laboratories",
-    modal_valle_li5: "🍽️ Buffet lunch included at local restaurant", modal_valle_li6: "🏰 Visit to Ollantaytambo: fortress and living Inca town",
-    modal_valle_li7: "🗿 Visit Pisac: archaeological center with impressive agricultural terraces", modal_valle_li8: "👨‍🏫 Professional guide throughout the tour", modal_valle_li9: "🚐 Return to Cusco (approx. 7:00 PM)",
-    modal_valle_note: "<strong>Includes:</strong> Transfer, guide, buffet lunch. <strong>Not included:</strong> Entrance fees to archaeological sites (can be added).",
-    modal_tipon_title: "🏺 South Valley - Itinerary", modal_tipon_day1: "Day 1: Archaeology and Inca Hydraulic Systems",
-    modal_tipon_li1: "🚐 Transfer from your hotel in Cusco (8:30 AM approx.)", modal_tipon_li2: "🏛️ Visit to Tipón: impressive complex of terraces and water channels",
-    modal_tipon_li3: "⛪ Tour of the Church of Andahuaylillas (\"Sistine Chapel of America\")", modal_tipon_li4: "🗿 Exploration of Pikillacta: pre-Inca city of the Wari culture",
-    modal_tipon_li5: "👨‍🏫 Professional guide in Spanish/English", modal_tipon_li6: "🚐 Return to Cusco (approx. 2:00 PM)",
-    modal_tipon_note: "<strong>Includes:</strong> Transfer, guide. | <strong>Not included: LUNCH</strong> | <strong>Note:</strong> Entrance fees to archaeological sites not included (can be arranged).",
-    modal_quel_title: "🧊 Quelccaya Glacier - Itinerary", modal_quel_day1: "Day 1: Cusco → Quelccaya",
-    modal_quel_li1: "🚐 Pick up from your hotel in Cusco (5:00 AM)", modal_quel_li2: "🍳 Breakfast on the route included",
-    modal_quel_li3: "🏔️ Transfer to the Quelccaya area (4-5 hours)", modal_quel_li4: "🥾 Approach trekking to the glacier (3-4 hours)",
-    modal_quel_li5: "🍲 Lunch included", modal_quel_li6: "🚐 Return to Cusco (approx. 6:00 PM)", modal_quel_li7: "🩹 First aid kit and oxygen available",
-    modal_quel_note: "<strong>Difficulty level: High</strong> | <strong>Recommendations: Minimum acclimatization of 2 days in Cusco.</strong> Bring warm clothes for extreme cold and sunscreen.",
-    modal_waq_title: "🦅 Waqrapukara - Itinerary", modal_waq_day1: "Day 1: Adventure to the Horn Temple",
-    modal_waq_li1: "🚐 Pick up from your hotel in Cusco (6:00 AM)", modal_waq_li2: "🍳 Light breakfast included on the route",
-    modal_waq_li3: "🚙 Transfer to the Accha community (2.5 hours)", modal_waq_li4: "🥾 Trekking to Waqrapukara (2 hours one way, moderate difficulty)",
-    modal_waq_li5: "🏰 Guided exploration of the archaeological complex", modal_waq_li6: "📸 Free time for panoramic photos of the canyon",
-    modal_waq_li7: "🥪 Picnic lunch included with spectacular views", modal_waq_li8: "🚐 Return to Cusco (approx. 5:00 PM)", modal_waq_li9: "🩹 First aid kit available",
-    modal_waq_note: "<strong>Altitude:</strong> 3,800 - 4,200 masl | <strong>Recommendation:</strong> Bring sunscreen, hat and water. Suggested acclimatization of 1 day in Cusco.",
-    modal_atv_title: "🏍️ ATV Sacred Valley - Itinerary", modal_atv_day1: "ATV Adventure through the Sacred Valley",
-    modal_atv_li1: "🚐 Transfer from Cusco to starting point in the Sacred Valley", modal_atv_li2: "⛑️ Safety briefing and delivery of complete equipment (helmet, gloves, etc.)",
-    modal_atv_li3: "🏍️ ATV tour through spectacular landscapes (2-4 hours depending on package)", modal_atv_li4: "🧂 Visit to Maras and/or Moray (depending on selected route)",
-    modal_atv_li5: "📸 Stops for panoramic photos at natural viewpoints", modal_atv_li6: "🩹 First aid kit and support guide", modal_atv_li7: "🚐 Return to Cusco",
-    modal_atv_note: "<strong>Requirements:</strong> Valid driver's license. <strong>Not recommended for:</strong> pregnant women or people with back problems."
+    badge_nature: "Nature", badge_culture: "Inca Culture", badge_extreme: "Extreme Adventure",
+    tour_machu_desc: "Live the experience of visiting one of the 7 wonders of the modern world.",
+    tour_city_desc: "Tour the imperial city of Cusco and visit Sacsayhuamán fortress.",
+    tour_valle_desc: "Explore Chinchero, Moray, Maras Salt Mines and Ollantaytambo.",
+    tour_vini_desc: "Discover magical Vinicunca, the multicolored mountain at 5,036 masl.",
+    tour_hum_desc: "Contemplate the turquoise waters of Humantay lagoon.",
+    tour_atv_desc: "Experience the adrenaline of touring the Sacred Valley on ATVs.",
+    feat_experience: "Experience", feat_experience_text: "Years of experience providing the best tourist services.",
+    feat_guides: "Expert Guides", feat_guides_text: "Professional bilingual guides with extensive knowledge.",
+    feat_security: "Security", feat_security_text: "Your safety is our priority. All necessary insurance.",
+    feat_price: "Best Price", feat_price_text: "Best prices without compromising quality.",
+    footer_rights: "All rights reserved."
   }
 };
 
@@ -914,14 +849,10 @@ function changeLanguage(lang, element) {
   document.querySelectorAll('.lang-option').forEach(opt => opt.classList.remove('active'));
   element.classList.add('active');
   document.getElementById('currentLang').textContent = lang.toUpperCase();
-  
   document.querySelectorAll('[data-key]').forEach(el => {
     const key = el.getAttribute('data-key');
-    if (translations[lang][key]) {
-      el.innerHTML = translations[lang][key];  // ✅ innerHTML para <strong>
-    }
+    if (translations[lang][key]) el.innerHTML = translations[lang][key];
   });
-  
   document.getElementById('langDropdown').classList.remove('active');
   localStorage.setItem('preferredLanguage', lang);
 }
@@ -929,56 +860,20 @@ function changeLanguage(lang, element) {
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('preferredLanguage') || 'es';
   document.getElementById('currentLang').textContent = savedLang.toUpperCase();
-  const options = document.querySelectorAll('.lang-option');
-  options.forEach(opt => {
-    if (opt.textContent.toLowerCase().includes(savedLang === 'es' ? 'español' : 'english')) {
-      opt.classList.add('active');
-    }
-  });
 });
 
-// Book Tour Function
 function bookTour(tourName) {
-  const message = encodeURIComponent(`Hola, quiero reservar el tour: ${tourName}\n\nPor favor contáctenme para confirmar.`);
-  window.open(`https://wa.me/51979051320?text=${message}`, '_blank');
+  window.open(`https://wa.me/51979051320?text=${encodeURIComponent(`Hola, quiero reservar: ${tourName}`)}`, '_blank');
 }
 
-// Itinerary Modal Functions
 function openItinerary(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow = 'hidden'; }
 function closeItinerary(id) { document.getElementById(id).classList.remove('active'); document.body.style.overflow = 'auto'; }
-document.querySelectorAll('.itinerary-modal').forEach(modal => {
-  modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.remove('active'); document.body.style.overflow = 'auto'; } });
-});
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { document.querySelectorAll('.itinerary-modal.active').forEach(m => { m.classList.remove('active'); document.body.style.overflow = 'auto'; }); } });
+document.querySelectorAll('.itinerary-modal').forEach(m => m.addEventListener('click', e => { if (e.target === m) closeItinerary(m.id); }));
 
-// Scroll Animation
-const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-}, observerOptions);
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-
-// Header scroll effect
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  header.style.background = window.scrollY > 100 ? 'rgba(255, 255, 255, 0.95)' : 'white';
-});
-
-// Form submission
-document.querySelector('form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('¡Gracias por tu mensaje! Te contactaremos pronto al WhatsApp +51 979 051 320 o al correo viajes.by.stefan@gmail.com');
-  e.target.reset();
-});
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function(e) { e.preventDefault(); document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' }); }));
 </script>
 </body>
 </html>
